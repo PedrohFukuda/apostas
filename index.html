@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aposta</title>
+</head>
+
+<body style="background-color: honeydew;">
+	<div class="border-bottom">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<div class="border-bottom">
+					<a class="navbar-brand" href="#"><i><b>TGL</b></i></a>
+
+				</div>
+				<div class="collapse navbar-collapse" id="navbarColor01">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Account</a>
+					</li>
+					<li class="nav-item active">
+						<p>
+							<a class="nav-link" href="#">
+								Log out
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-arrow-right" viewBox="0 0 16 16">
+									<path fill-rule="evenodd"
+										d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+								</svg>
+							</a>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm">
+				<div style="margin-top: 25px !important; margin-bottom: 25px !important;">
+					<h2><i><b>New bet</b><span> for <span data-js="game-name"></span></span></i></h2>
+				</div>
+				<div>
+					<div>
+						<div>
+							<p><i>Choose a game</i></p>
+						</div>
+						<div data-js="games-buttons-div"></div>
+					</div>
+					<div style="margin-top: 25px !important;">
+						<p><b><i>Fill your bet</i></b></p>
+						<p data-js="game-description"></p>
+					</div>
+				</div>
+
+				<div>
+					<table>
+						<tbody data-js="numbers-table-body"></tbody>
+					</table>
+				</div>
+
+				<div style="margin-top: 25px !important; background-color: honeydew;"
+					class="bg-light d-flex justify-content-between">
+					<div class="pull-left">
+						<button class="btn btn-outline-primary" data-js="button-complete-game">Complete game</button>
+						<button class="btn btn-outline-primary" data-js="button-clear-game">clear game</button>
+					</div>
+					<div class="pull-right">
+						<button class="btn btn-primary" data-js="button-add-cart">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart"
+								viewBox="0 0 16 16">
+								<path
+									d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+							</svg>
+							<span style="margin-left: 10px;">Add to cart</span></button>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-sm">
+				<div class="card" style="width: 60%; float: left; margin: 15px;">
+					<div class="container">
+						<h3><i><span>Cart</span></i></h3>
+						<div data-js="cart-body"></div>
+						<div style="margin-top: 25px; margin-bottom: 25px;">
+							<h5><span><i><b>Cart</b></i> total: </span> R$ <span data-js="total-price">0,00</span></h5>
+						</div>
+					</div>
+					<div class="container" style="background-color: honeydew; text-align: center;">
+						<h2 style="color:green"><b>
+								Save
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-arrow-right" viewBox="0 0 16 16">
+									<path fill-rule="evenodd"
+										d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+								</svg>
+							</b></h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="dom.js"></script>
+	<script src="index.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+<div style="display: none;">
+	<div data-js="trash" class="container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash"
+			viewBox="0 0 16 16">
+			<path
+				d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+			<path fill-rule="evenodd"
+				d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+		</svg>
+	</div>
+</div>
